@@ -1,0 +1,5 @@
+create table if not exists users (id serial, username varchar(20) not null, email varchar(50) not null, primary key (id) );
+create table if not exists ticked (id serial, user_id integer not null, name varchar(50) not null, type integer not null, difficulty varchar(10) not null, rating integer not null, location varchar(50) not null, tick_date date not null, primary key (id) );
+create table if not exists to_do (id serial, user_id integer not null, name varchar(50) not null, type integer not null, difficulty varchar(10) not null, location varchar(50) not null, primary key (id) );
+create table if not exists goals (id serial, user_id integer not null, title varchar(50) not null, description text, custom boolean not null, active boolean not null, current integer, goal integer, primary key (id) );
+create table if not exists beta (id serial, climb_id integer not null, beta text not null, date_added date not null, primary key (id) );
